@@ -1,6 +1,6 @@
 # Temp_Light_Controller
 
-A project using **ESP32-WROOM-32** to control a fan based on temperature and a light based on ambient brightness. The system features real-time temperature display via a **TM1637 7-segment display** and includes a push button to switch between automatic and manual control modes.
+Một dự án sử dụng ESP32-WROOM-32 để điều khiển quạt dựa trên nhiệt độ và điều khiển đèn dựa trên độ sáng môi trường xung quanh. Hệ thống có chức năng hiển thị nhiệt độ theo thời gian thực thông qua màn hình LED 7 đoạn TM1637 và bao gồm nút nhấn để chuyển đổi giữa chế độ tự động và chế độ điều khiển thủ công.
 
 ---
 
@@ -91,8 +91,19 @@ A project using **ESP32-WROOM-32** to control a fan based on temperature and a l
 
 ```plaintext
 Temp_Light_Controller/
-├── src/                # Mã nguồn chính
-├── include/            # Header files (nếu có)
-├── lib/                # Thư viện tùy chỉnh (nếu có)
-├── docs/               # Sơ đồ mạch, ảnh mô tả
-└── README.md           # Mô tả dự án
+├── 1. Block Diagram/           # Sơ đồ khối hệ thống
+├── 2. Schematic Diagram/       # Sơ đồ nguyên lý mạch điện
+├── 3. Codes/                   # Mã nguồn chương trình
+│   ├── LDR-LED/                # Điều khiển đèn bằng cảm biến ánh sáng (LDR)
+│   ├── LM35-FAN/               # Điều khiển quạt bằng cảm biến nhiệt độ (LM35)
+│   ├── TM_LDR_LM35/            # Hiển thị nhiệt độ và điều khiển dựa vào LDR + LM35
+│   └── TM_LDR_LM35_4BUTTON/    # Phiên bản đầy đủ, thêm 4 nút nhấn điều khiển
+├── 4. Algorithm Flowchart/     # Lưu đồ thuật toán
+├── 5. Document/                # Tài liệu mô tả, báo cáo
+├── 6. Demo/                    # Hình ảnh và video mô tả hệ thống thực tế
+│   ├── Images/                 # Ảnh thực tế sau khi in mạch, lắp ráp
+│   └── Videos/                 # Video hoạt động
+└── README.md                   # Mô tả tổng quan dự án
+
+
+
