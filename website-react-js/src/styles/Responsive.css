@@ -1,0 +1,202 @@
+/* ===== Default (PC, Laptop) ===== */
+.display-panel,
+.threshold-block,
+.fan-control-block {
+  margin: 0rem 0rem;
+}
+
+
+/* ===== Tablet & Mobile: ≤ 1024px ===== */
+@media (max-width: 1024px) {
+  div.app-container {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    align-items: center;
+    justify-content: center;
+  }
+
+  div.control-row {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .display-panel {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 1rem;
+    width: 100%;
+    max-width: 600px;
+    
+  }
+
+  .display-panel .data-block {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    width: 90%;
+    padding: 1rem;
+    border: 1px solid #ccc;
+    border-radius: 0.75rem;
+    background: white;
+  }
+
+  .threshold-row:last-child {
+    margin-bottom: 2rem !important;
+  }
+  .text-block {padding-right: 2rem;}
+  .mode-block {padding-right: 2rem;}
+  .icon {margin-left: 0.5rem; font-size: 4.4rem}
+  .value {margin-top: 0rem; margin-bottom: 1rem; font-size: 2.2rem;}
+  .loading {
+    font-size: 0.9rem;
+    color: #888;
+    font-style: italic;
+  }
+
+  .threshold-block,
+  .fan-control-block {
+    width: 100%;
+    max-width: 600px;
+  }
+
+  .fan-icon {
+    margin: 0 auto;
+    font-size: 8rem;
+  }
+
+  .fan-controls {
+    align-items: center;
+    margin: 0;
+  }
+
+  .fan-btn {
+    width: 80%;
+  }
+}
+
+/* ===== Mobile: ≤ 768px ===== */
+@media (max-width: 768px){
+  
+  .app-container {
+    padding: 2rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .display-panel{
+    align-items: center;
+  }
+
+  .display-panel .data-block {
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+      width: 80%;
+    }
+  
+  
+  .control-row {
+    display: flex;
+    margin-left: 0rem;
+    justify-content: center !important;
+  }
+
+  .icon {
+    font-size: 3.8rem;
+
+  }
+  .text-block {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    margin-left: 2.5rem;
+    margin-top: -2.5rem;
+  }
+  .text-block .label {
+    font-size: 1.5rem;
+  }
+
+  .value{
+    font-size: 2.0rem;
+    margin-top: 0rem;
+
+  }
+  .loading {
+    font-size: 0.9rem;
+    color: #888;
+    font-style: italic;
+  }
+
+  .mode-block {
+    margin-top: -2.5rem;
+    margin-left: 2.5rem;
+  }
+  .mode-block .loading{
+    margin-top: 0rem;
+  }
+  .mode-value{margin-top: 0rem;}
+
+
+  
+
+  /*-----------------------------------------*/
+
+  .threshold-block,
+  .fan-control-block {
+    padding: 1rem;
+  }
+
+  .threshold-row {
+    flex-direction: column;
+    align-items: center;
+    gap: 0.5rem;
+  }
+
+  .threshold-btn {
+    width: 50%;
+    margin-bottom: 1rem;
+  }
+
+  .fan-control-block .fan-icon {
+    font-size: 8rem;
+    text-align: center;
+    width: auto;             /* 👈 đừng full width */
+    margin: 0 auto;
+  }
+
+  div.fan-control-block {
+  display: flex;
+  flex-direction: column;
+  align-items: center;     /* căn giữa ngang các phần tử */
+  justify-content: center; /* căn giữa dọc nếu có chiều cao */
+  gap: 3rem;
+  width: fit-content;      /* 👈 chỉ chiếm theo nội dung */
+  margin: 0 auto;          /* 👈 căn giữa khối trắng */
+  background: white;       /* kiểm tra khối trắng */
+  padding-top: 4rem;
+  padding-bottom: 2rem;           /* thêm padding nếu cần */
+  border-radius: 1rem;     /* đẹp hơn */
+  
+}
+.fan-btn {
+  width: auto !important;      /* 👈 Bỏ width 100% */
+  min-width: 200px;            /* 👌 Tuỳ chọn để không quá nhỏ */
+  text-align: center;
+  margin: 0 auto;              /* 👈 Căn giữa nếu vẫn chưa được */
+}
+div.fan-controls {
+  display: flex;             /* ❗ BẮT BUỘC để flex hoạt động */
+  flex-direction: column;    /* Các nút xếp theo chiều dọc */
+  align-items: center;       /* Căn giữa ngang các nút */
+  justify-content: center;   /* Căn giữa dọc nếu có chiều cao */
+  width: fit-content;        /* Không cho chiếm full width */
+  margin: 0 auto;            /* Căn giữa khối chứa nếu cần */
+}
+}
+  

@@ -1,0 +1,101 @@
+.fan-control-block {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: linear-gradient(135deg, #ffffff, #f4f6f8);
+  padding: 1.5rem;
+  border: 2px solid #d0d0d0;
+  border-radius: 1rem;
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.08);
+  width: 50%;
+  max-width: 500px;
+  min-width: 320px;
+  min-height: 190px; 
+  gap: 1rem;
+  /* các style hiện có */
+  transition: box-shadow 0.3s ease, transform 0.3s ease;
+}
+
+.fan-control-block:hover {
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
+  transform: scale(1.02);
+}
+
+.fan-icon {
+  width: 80px;
+  height: 80px;
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #0ea5e9;
+  font-size: 11rem;
+  margin-left: 4.5rem;
+}
+
+/* Animation spin chung */
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+/* Các tốc độ quay khác nhau cho từng cấp */
+.spinning.spin-level-1 {
+  animation: spin 2s linear infinite; /* quay chậm */
+}
+
+.spinning.spin-level-2 {
+  animation: spin 1s linear infinite; /* quay trung bình */
+}
+
+.spinning.spin-level-3 {
+  animation: spin 0.5s linear infinite; /* quay nhanh */
+}
+
+.fan-controls {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-end;  /* 🌟 Căn nút sang phải */
+  gap: 1rem;
+  margin-right: 30px;
+}
+
+.fan-btn {
+  padding: 0.8rem 1.2rem;
+  font-size: 1rem;
+  font-weight: 600;
+  color: #fff;
+  border: none;
+  border-radius: 0.6rem;
+  cursor: pointer;
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.08);
+  transition: background 0.3s ease, transform 0.2s ease;
+  width: 50%;
+}
+
+.fan-btn:hover {
+  transform: scale(1.05);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+}
+
+.fan-btn.manual-toggle {
+  background: linear-gradient(to right, #10b981, #059669);
+}
+.fan-btn.manual-toggle:hover {
+  background: linear-gradient(to right, #059669, #047857);
+}
+
+.fan-btn.increase {
+  background: linear-gradient(to right, #f97316, #ea580c);
+}
+.fan-btn.increase:hover {
+  background: linear-gradient(to right, #ea580c, #c2410c);
+}
+
+.loading2 {
+  font-size: 0.9rem;
+  color: #f2f2f2;
+  font-style: italic;
+}
