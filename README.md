@@ -32,8 +32,6 @@ The hardware uses **ESP32-WROOM-32** to control:
 | **TM1637 Display** | Shows temperature, brightness, fan level, and operation mode    |
 
 
-📎 [ESP32 Project Repository](https://github.com/SiTran01/Temp_Light_Controller.git)
-
 ---
 
 ### 2. 📱 Mobile App – React Native
@@ -49,8 +47,8 @@ It displays:
 
 ```bash
 # Clone the repository
-git clone https://github.com/SiTran01/app-react-native.git
-cd app-react-native
+git clone https://github.com/SiTran01/PROJECT-temp-light-controller.git
+cd PROJECT-temp-light-controller\app-android-react-native
 
 # Install dependencies
 npm install
@@ -71,9 +69,9 @@ npx react-native run-android
 * Android device has USB Debugging enabled
 * OR emulator is running in Android Studio
 
-📎 [React Native App Repository](https://github.com/SiTran01/app-react-native)
 
 ---
+
 
 ### 3. 💻 Web Dashboard – React + Vite
 
@@ -90,8 +88,8 @@ A modern web interface to monitor the same sensor data and control fan/light ove
 
 ```bash
 # clone project web=site
-git clone https://github.com/SiTran01/app-react-native.git
-cd app-react-native
+git clone https://github.com/SiTran01/PROJECT-temp-light-controller.git
+cd PROJECT-temp-light-controller\website-react-js
 
 # Install dependencies
 npm install
