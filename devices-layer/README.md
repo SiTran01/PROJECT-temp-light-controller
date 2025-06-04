@@ -53,12 +53,12 @@ A project using **ESP32-WROOM-32** to control a fan based on temperature and a l
 
 | Tool / Software         | Purpose                                                                 |
 |-------------------------|-------------------------------------------------------------------------|
-| **Arduino IDE**         | Code development and uploading to ESP32                                |
+| **Arduino IDE**         | Code development and uploading to ESP32                                 |
 | **Proteus**             | Electronic circuit simulation                                           |
 | **Altium Designer**     | Schematic and PCB design                                                |
-| **Draw.io**             | Drawing block diagrams and system documentation                        |
-| **ESP32 Board Package** | ESP32 compilation and upload support                                   |
-| **TM1637Display Library** | Interfacing with TM1637 7-segment display                            |
+| **Draw.io**             | Drawing block diagrams and system documentation                         |
+| **ESP32 Board Package** | ESP32 compilation and upload support                                    |
+| **TM1637Display Library** | Interfacing with TM1637 7-segment display                             |
 
 ---
 
@@ -87,7 +87,7 @@ A project using **ESP32-WROOM-32** to control a fan based on temperature and a l
 ## 📂 Project Folder Structure
 
 ```plaintext
-Temp_Light_Controller/
+devices-layer/
 ├── 1. Block Diagram/           # System block diagram
 ├── 2. Schematic Diagram/       # Electrical schematic diagram
 ├── 3. Codes/                   # Source code of the project
@@ -98,9 +98,8 @@ Temp_Light_Controller/
 ├── 4. Algorithm Flowchart/     # Flowcharts for system logic
 ├── 5. Document/                # Reports and project documents
 ├── 6. Demo/                    # Real system images and demo videos
-│   ├── Images/                 # Real-world photos after PCB printing
-│   └── Videos/                 # Demonstration videos
-└── README.md                   # Project overview and information
+    ├── Images/                 # Real-world photos after PCB printing
+    └── Videos/                 # Demonstration videos
 
 
 ### Link Project: 
