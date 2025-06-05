@@ -8,7 +8,7 @@ import { sendThresholds } from '../api/ESPDataWrite';
 const AdjTempBlock = () => {
 
   const handleIncreaseTemp2 = async () => {
-  if (!espData) return;
+  if (!espData) {return;}
 
   const newTemp2 = espData.Temp2 + 2;
 
@@ -21,7 +21,7 @@ const AdjTempBlock = () => {
 };
 
 const handleIncreaseTemp3 = async () => {
-  if (!espData) return;
+  if (!espData) {return;}
 
   const newTemp3 = espData.Temp3 + 2;
 
@@ -75,35 +75,43 @@ const handleIncreaseTemp3 = async () => {
 
 const styles = StyleSheet.create({
   container: {
-    backgroundColor: '#fefefe',
+    backgroundColor: '#e8f5e9', // Nền xanh nhạt nhẹ nhàng
     margin: 10,
     padding: 16,
-    borderRadius: 12,
-    elevation: 2,
+    borderRadius: 16,
+    borderWidth: 2,
+    borderColor: '#34A853', // Viền xanh lá
+    shadowColor: '#000',
+    shadowOffset: { width: 0, height: 4 },
+    shadowOpacity: 0.2,
+    shadowRadius: 6,
+    elevation: 5, // Bóng đổ Android
   },
   header: {
-    fontSize: 20,
+    fontSize: 22,
     fontWeight: '700',
-    marginBottom: 12,
+    marginBottom: 14,
     textAlign: 'center',
-    color: '#333',
+    color: '#2e7d32', // Đậm hơn chút
   },
   block: {
     flexDirection: 'row',
     alignItems: 'center',
     justifyContent: 'space-between',
     marginVertical: 10,
-    backgroundColor: '#f2f2f2',
-    paddingVertical: 20, // ⬆️ Cao thêm
-    paddingHorizontal: 16, // ⬅️ Thêm padding để icon & button không sát biên
-    borderRadius: 10,
+    backgroundColor: '#ffffff',
+    paddingVertical: 18,
+    paddingHorizontal: 16,
+    borderRadius: 12,
+    borderWidth: 1,
+    borderColor: '#c8e6c9', // viền nhẹ cho từng block
   },
   leftSection: {
     flexDirection: 'row',
     alignItems: 'center',
   },
   icon: {
-    marginRight: 20, // ⬆️ Tăng khoảng cách icon - text
+    marginRight: 20,
   },
   textContainer: {
     justifyContent: 'center',
@@ -114,21 +122,22 @@ const styles = StyleSheet.create({
     color: '#555',
   },
   value: {
-    fontSize: 18,
+    fontSize: 20,
     fontWeight: '700',
-    color: '#e53935', // ⬅️ Màu đỏ hồng cho giá trị
+    color: '#d32f2f', // đỏ đậm hơn
   },
   button: {
-    backgroundColor: '#34A853',
+    backgroundColor: '#388e3c',
     paddingVertical: 8,
-    paddingHorizontal: 16,
-    borderRadius: 8,
+    paddingHorizontal: 20,
+    borderRadius: 10,
   },
   buttonText: {
     color: '#fff',
-    fontSize: 16,
+    fontSize: 17,
     fontWeight: '600',
   },
 });
+
 
 export default AdjTempBlock;

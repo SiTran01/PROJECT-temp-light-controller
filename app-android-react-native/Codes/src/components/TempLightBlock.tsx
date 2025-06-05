@@ -59,15 +59,26 @@ const styles = StyleSheet.create({
     flexDirection: 'row',
     flexWrap: 'wrap',
     justifyContent: 'space-around',
-    padding: 10,
+    paddingHorizontal: 12,
+    paddingVertical: 8,
   },
   block: {
     width: '45%',
-    backgroundColor: '#f2f2f2',
-    padding: 16,
-    margin: 8,
-    borderRadius: 10,
-    elevation: 2,
+    backgroundColor: '#ffffff',
+    paddingVertical: 20,
+    paddingHorizontal: 16,
+    marginVertical: 10,
+    borderRadius: 16,
+
+    // Viền & bóng đổ tinh tế
+    borderWidth: 1,
+    borderColor: '#cdd9ed', // xanh-xám hiện đại
+    shadowColor: '#000',
+    shadowOffset: { width: 0, height: 4 },
+    shadowOpacity: 0.1,
+    shadowRadius: 8,
+    elevation: 6,
+
     justifyContent: 'center',
   },
   row: {
@@ -75,30 +86,37 @@ const styles = StyleSheet.create({
     alignItems: 'center',
   },
   icon: {
-    marginRight: 12,
+    marginRight: 14,
   },
   textContainer: {
     flex: 1,
-    alignItems: 'center',
+    alignItems: 'flex-start',
   },
   label: {
-    fontSize: 18,
+    fontSize: 16,
     fontWeight: '600',
+    color: '#444',
+    marginBottom: 4,
   },
   value: {
-    fontSize: 20,
-    fontWeight: 'bold',
+    fontSize: 22,
+    fontWeight: '700',
+    color: '#2c3e50',
   },
   unit: {
     fontSize: 16,
     fontWeight: '400',
+    color: '#7f8c8d',
   },
   errorText: {
-    color: 'red',
+    color: '#e74c3c',
     textAlign: 'center',
-    marginTop: 8,
+    marginTop: 10,
+    fontSize: 15,
+    fontWeight: '500',
   },
 });
+
 
 export default TempLightBlock;
 
