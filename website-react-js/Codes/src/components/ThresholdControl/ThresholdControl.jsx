@@ -1,7 +1,20 @@
-import { useESPData } from "../../hooks/ESPDataRead";
-import { updateControlState } from "../../hooks/ESPDataWrite";
 import "./ThresholdControl.css";
 import "../../styles/Responsive.css"; // import responsive styles
+
+
+/* ------------------------------------------------------------------------------
+    use API for HTTP protocol communication   */
+// import { useESPData } from "../../api/http_protocol/ESPDataRead";
+// import { updateControlState } from "../../api/http_protocol/ESPDataWrite";
+/* ----------------------------------------------------------------------------- */
+
+
+/* ------------------------------------------------------------------------------
+    use API for WebSocket protocol communication   */
+import { useESPData } from "../../api/websocket_protocol/ESPDataRead";
+import { updateControlState } from "../../api/websocket_protocol/ESPDataWrite";
+/* ----------------------------------------------------------------------------- */
+
 
 function ThresholdControl() {
   const data = useESPData();
@@ -13,7 +26,7 @@ function ThresholdControl() {
   };
 
   const handleIncreaseTemp3 = () => {
-    let newTemp3 = data.temp3 + 2;
+    let newTemp3 = data.temp3 + 2;  
     if (newTemp3 > 99) newTemp3 = data.temp2 + 1;
     updateControlState(data.temp2, newTemp3, data.isManual, data.fanLevel);
   };
@@ -22,7 +35,7 @@ function ThresholdControl() {
 
   return (
     <div className="threshold-block">
-      <p className="threshold-title">🧊 Ngưỡng nhiệt độ:</p>
+      <p className="threshold-title">🧊 Adjustable Temperature</p>
 
       <div className="threshold-row">
         <span className="threshold-label">Temp2:</span>

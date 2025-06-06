@@ -6,6 +6,7 @@ import "./App.css"; // import CSS
 // import "./styles/Responsive.css"; // import responsive styles
 
 
+
 function App() {
   const [data, setData] = useState({
     temp: 0,
