@@ -16,7 +16,7 @@ export default function useESPStatus() {
 
   const fetchESPStatus = async () => {
     try {
-      const response = await fetch('http://192.168.0.148/status');
+      const response = await fetch('https://smarthomeworld.cyou/api/status');
       const data: ESPData = await response.json();
       setEspData(data);
       setError(null); // reset lỗi nếu request thành công

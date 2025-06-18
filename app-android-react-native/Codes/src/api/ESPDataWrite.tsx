@@ -1,8 +1,3 @@
-const ESP32_IP = 'http://192.168.0.148';
-
-/**
- * Gửi toàn bộ cấu hình xuống ESP32
- */
 export const sendThresholds = async ({
   temp2,
   temp3,
@@ -15,7 +10,7 @@ export const sendThresholds = async ({
   fanLevel: number;
 }) => {
   try {
-    const response = await fetch(`${ESP32_IP}/set-thresholds`, {
+    const response = await fetch(`https://smarthomeworld.cyou/api/control`, {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json'
@@ -28,9 +23,18 @@ export const sendThresholds = async ({
       })
     });
 
-    return await response.json(); // { status: "success" } hoặc { error: "..." }
+    if (!response.ok) {
+      const errText = await response.text();
+      throw new Error(`HTTP ${response.status} - ${errText}`);
+    }
+
+    return await response.json(); // ví dụ: { status: "success" }
   } catch (error) {
     console.error('❌ Failed to send thresholds:', error);
-    return { error };
+
+    if (error instanceof Error) {
+      return { error: error.message };
+    }
+    return { error: String(error) };
   }
 };
