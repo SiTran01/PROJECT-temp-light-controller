@@ -98,14 +98,9 @@ npm install
 npm run dev
 ```
 
-Visit:
-
-* Local: [http://localhost:5173/](http://localhost:5173/)
-* LAN: [http://192.168.0.xxx:5173/](http://192.168.0.xxx:5173/)
-
-💡 ESP32 and web app **must be on the same Wi-Fi network**
-
----
+🌐 Visit the Web Dashboard:
+  🌍 Public Access: http://smarthomeworld.cyou/
+  ⏳ Available Until: 15/06/2026
 
 ## 📬 Contact
 
