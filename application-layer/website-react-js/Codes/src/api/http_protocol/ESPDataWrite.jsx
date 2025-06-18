@@ -1,6 +1,6 @@
 export const updateControlState = async (temp2, temp3, isManual, fanLevel) => {
   try {
-    const response = await fetch('http://192.168.0.148/set-thresholds', {
+    const response = await fetch('/api/control', {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json'

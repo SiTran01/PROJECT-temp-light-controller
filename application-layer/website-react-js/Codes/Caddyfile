@@ -1,0 +1,10 @@
+smarthomeworld.cyou
+
+# Proxy các API request đến backend
+handle /api/* {
+    reverse_proxy http://localhost:3000
+}
+
+# Phục vụ static files từ thư mục build của React
+root * C:\Users\Administrator\Desktop\test\frontend\dist
+file_server

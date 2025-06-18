@@ -12,7 +12,7 @@ export const ESPDataProvider = ({ children }) => {
 
   const fetchESPData = async () => {
     try {
-      const response = await fetch('http://192.168.0.148/status'); // ← thay bằng IP ESP32 thật
+      const response = await fetch('/api/status'); // ← thay bằng IP ESP32 thật
       const data = await response.json();
 
       // Giả sử JSON trả về có: temperature, light, fanLevel, isManual

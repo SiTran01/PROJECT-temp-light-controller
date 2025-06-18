@@ -7,16 +7,16 @@ import './index.css';
 /* ------------------------------------------------------------------------------
     use API for HTTP protocol communication   */
     
-// import { ESPDataProvider } from './api/http_protocol/ESPDataRead.jsx';
+import { ESPDataProvider } from './api/http_protocol/ESPDataRead.jsx';
 /* ----------------------------------------------------------------------------- */
 
 
 /* ------------------------------------------------------------------------------
     use API for WebSocket protocol communication   */
 
-import { ESPDataProvider } from './api/websocket_protocol/ESPDataRead.jsx';
-import { initWebSocket } from "./api/websocket_protocol/ESPDataWrite.jsx"; 
-initWebSocket(); // 👉 initial websocket
+// import { ESPDataProvider } from './api/websocket_protocol/ESPDataRead.jsx';
+// import { initWebSocket } from "./api/websocket_protocol/ESPDataWrite.jsx"; 
+// initWebSocket(); // 👉 initial websocket
 /* ----------------------------------------------------------------------------- */
 
 

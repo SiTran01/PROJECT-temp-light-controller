@@ -4,13 +4,13 @@ import "../../styles/Responsive.css"; // import responsive styles
 
 /* ------------------------------------------------------------------------------
     use API for HTTP protocol communication   */
-// import { useESPData } from "../../api/http_protocol/ESPDataRead";
+import { useESPData } from "../../api/http_protocol/ESPDataRead";
 /* ----------------------------------------------------------------------------- */
 
 
 /* ------------------------------------------------------------------------------
     use API for WebSocket protocol communication   */
-import { useESPData } from "../../api/websocket_protocol/ESPDataRead";
+// import { useESPData } from "../../api/websocket_protocol/ESPDataRead";
 /* ----------------------------------------------------------------------------- */
 
 
